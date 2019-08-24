@@ -1,23 +1,22 @@
 language: go
-
 go:
-  - "1.12.x"
-
+- 1.12.x
 cache: bundler
-
 before_install:
-  - go get github.com/antonholmquist/jason
-  - go get github.com/aws/aws-lambda-go/events
-  - go get github.com/aws/aws-lambda-go/lambda
-  - go get github.com/aws/aws-sdk-go/aws
-  - go get github.com/aws/aws-sdk-go/aws/credentials
-  - go get github.com/aws/aws-sdk-go/aws/session
-  - go get github.com/aws/aws-sdk-go/aws/signer/v4
-  - go get github.com/aws/aws-sdk-go/service/s3/s3manager
-  - go get github.com/sha1sum/aws_signing_client
-  - go get gopkg.in/olivere/elastic.v6
-
-install:
-
+- go get github.com/antonholmquist/jason
+- go get github.com/aws/aws-lambda-go/events
+- go get github.com/aws/aws-lambda-go/lambda
+- go get github.com/aws/aws-sdk-go/aws
+- go get github.com/aws/aws-sdk-go/aws/credentials
+- go get github.com/aws/aws-sdk-go/aws/session
+- go get github.com/aws/aws-sdk-go/aws/signer/v4
+- go get github.com/aws/aws-sdk-go/service/s3/s3manager
+- go get github.com/sha1sum/aws_signing_client
+- go get gopkg.in/olivere/elastic.v6
+install: 
 script:
- - go test -v -cover sendlog_test.go sendlog.go
+- go test -v -cover sendlog_test.go sendlog.go
+env:
+  global:
+  - secure: Y8ADB+m7PwU7Xe4PjMxiU8+5dGkj1s30tbbIPX0Gb+az67EQB3VrK5zoulxhjcYXlIiBUFKYfP3ygcYSvReAkgflJ2vqnuPPz6Cn0nHmHmdRkeImarmIAvLUYdjEsCE7wLmkDtTT99ynRcP4mvQsitLUxdIaIcEEyvxoSmyQdK/bLf56rlpRUheTDVc86LXf5f0GHUVMg3KvlkRXLpVkk1EM4QvveyLxr3CvvKy0Te3GmTlL30hrcAeR7OoGlS4Sm3PuZFQ65nHPnhRYixgOpet9OLoxf6NA0htDvFNmK9T72eBbKZdG3qtj2HhxmNuse37twAjFX4xluRu8CVxfKjDbKv0udBqeCAyjkyLcyJrWJdlrmVVRmVKL6rVdX5rEdkSpSC42pCJG4WlRSdDVFSIPWKY2Z8UGcWnkf2ZC+BOitmO4+NC0W/IReA3PDoHAar5O89JC6qZAXnw6c7jvrsX2A5wFEHCVY4WgmwU8VYfKSLwuq3VKJ7z2qldRoxACak7vrYBWxr00G9o1zlu56pEKAXVTBrrYuMcvhgQGblJFjhn6Xbpm1ffYRByh4JJ8DvwnXQ++D2O8DoRmirYVNQEHaRC9RcQoL3rjW2rzQbSdsccj0UCY07Qx/M82CJlCH0f/kVTPhyeicdsHS49a91sAubHlCRoDeKAmYyJ1ZF0=
+  - secure: PzEqZQUX+RAEDiFVHyodxKb2ZfiHC0cQCpPY95Ldx0KWY+Qz7Sdb4FiijmamxBVmxX9ytLU4Z//e4pAV2wp+yBAcpfas0D73kvq+BuUN3MiL7V6ZQf8s8AHGhRdTOSY4D6DgbgK+ukupo685tV6a5HAM9hjCaFSD/iCatGHhizEX6kuIzEsVLoSsGdcRMlhJeC4mI0CL+siCQIQO512uI6tAja945z1kTeFDGW3tBmpMUf8gP9FCuGwwiqDcoEOvYyDaUCtk8Y2a/kRh7WGL1Jj8Ui8lvO5IUhO1yRvuXo5JFG/YjG7eAOGFb7Yl++ONdI2SWf5skb/NnA0BiK2ve+6uDsKFavxf8S0ATCSp7adHfluWbziOUrUSDRxqNVevYbtmJaf8J+ax+j4nz+3BdqJyr2Tzn5vWN1tGhn6VxyRECyvGlA5aAPm2EcaJGjOL8xZDHN574MnfiTtQUPTCQhLMU6nnFB9SgA8udjoJ660FFmr1ZJPIXrml+4WRHVOzR0CQd0vnDd6u3zmO0iS1ANYRl25vUAtWbN16AthSL6t3RHPenfYuelwnUfsAA/ffXGr8agOkDDWNFNf1GTZnYDgPqFzGRsSd4Ke6HSkJyrIDrKTshtN+mUr06Rd1xzx4ybeeUj1JVJ4X7fp99NwRfgE5Sh6CKFU+U0aLU+IMAFk=

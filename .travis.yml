@@ -16,4 +16,4 @@ before_install:
 install:
 
 script:
- - go test -v
+ - go test -v -cover sendlog_test.go sendlog.go

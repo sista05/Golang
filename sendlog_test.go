@@ -50,7 +50,7 @@ func TestS3Upload(t *testing.T) {
 		datajson, _ := marshalAthena(data)
 		result, err := s3Upload(buf, datajson, "", "")
 		if err != nil {
-			t.Fatal("Error failed to s3upload")
+			t.Fatal("Error failed to s3upload %s", err)
 		}
 		if result.Location == "" {
 			t.Errorf("got: %v\nwant: %v", result.UploadID, "")
@@ -91,7 +91,7 @@ func TestHandler(t *testing.T) {
 func TestMain(m *testing.M) {
 	println("before all...")
 
-	os.Setenv("SLACK_WEBHOOK_URL", "https://hooks.slack.com/services/T02HDFTHD/BK560B15L/bOdFNGKlnGmbnPf8YUfxsp")
+	os.Setenv("SLACK_WEBHOOK_URL", "https://hooks.slack.com/services/T02HDFTHD/BK560B15L/")
 	os.Setenv("REGION", "ap-northeast-1")
 	os.Setenv("S3_BUCKET", "sista05-development")
 

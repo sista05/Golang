@@ -5,6 +5,7 @@
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
 [![Twitter](https://img.shields.io/badge/twitter-@sista05-blue.svg?style=flat)](http://twitter.com/sista05)
+[![Build Status](https://travis-ci.org/sista05/Log_aggregation_by_lambda.svg?branch=master)](https://travis-ci.org/sista05/Log_aggregation_by_lambda)
 
 ## Overview
 Send nginx access log and laravel application log to s3/slack/elasticsearch.
@@ -25,7 +26,7 @@ Send nginx access log and laravel application log to s3/slack/elasticsearch.
 
 #### kinesis-send-log
 
-| Value |Contents |
+| Variable |Description|
 | :--- | :--- |
 | REGION | region name (e.g. ap-northeast-1)
 | S3_BUCKET| log strage bucket name |
@@ -39,7 +40,7 @@ Send nginx access log and laravel application log to s3/slack/elasticsearch.
 
 #### kinesis-send-end-log
 
-| Value |Contents |
+| Variable |Description|
 | :--- | :--- |
 | REGION | region name (e.g. ap-northeast-1)
 | S3_BUCKET| log strage bucket name |
@@ -49,7 +50,7 @@ Send nginx access log and laravel application log to s3/slack/elasticsearch.
 
 #### alert-lambda-failure
 
-| Value |Contents |
+| Variable |Description|
 | :--- | :--- |
 | SLACK_WEBHOOK_URL| log strage bucket name |
 | SLACK_CHANNEL| slack channel destination |

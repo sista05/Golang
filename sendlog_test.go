@@ -89,12 +89,11 @@ func TestHandler(t *testing.T) {
 }
 
 func TestMain(m *testing.M) {
-	// test前処理
 	println("before all...")
 
-	os.Setenv("SLACK_WEBHOOK_URL", "https://hooks.slack.com/services/T02HDFTHD/BK560B15L/bOdFNGKlnGmbnPf8YUfxspI")
+	os.Setenv("SLACK_WEBHOOK_URL", "https://hooks.slack.com/services/T02HDFTHD/BK560B15L/bOdFNGKlnGmbnPf8YUfxsp")
 	os.Setenv("REGION", "ap-northeast-1")
-	os.Setenv("S3_BUCKET", "loco-iwasaki")
+	os.Setenv("S3_BUCKET", "sista05-development")
 
 	code := m.Run()
 	println("after all...")

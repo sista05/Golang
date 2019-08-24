@@ -15,7 +15,8 @@ before_install:
 - go get gopkg.in/olivere/elastic.v6
 install: 
 script:
-- go test -v -cover sendlog_test.go sendlog.go
+- aws configure list
+#- go test -v -cover sendlog_test.go sendlog.go
 
 env:
   global:

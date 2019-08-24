@@ -50,7 +50,7 @@ func TestS3Upload(t *testing.T) {
 		datajson, _ := marshalAthena(data)
 		result, err := s3Upload(buf, datajson, "", "")
 		if err != nil {
-			t.Fatal("Error failed to s3upload %s", err)
+			t.Fatal("Error failed to s3upload ", err)
 		}
 		if result.Location == "" {
 			t.Errorf("got: %v\nwant: %v", result.UploadID, "")
